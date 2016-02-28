@@ -1,0 +1,21 @@
+{
+	"manifest_version": 2,
+    "name": "斗鱼火箭监视、抢宝箱",
+    "version": "1.1.0",
+    "description": "斗鱼火箭监视、抢宝箱",
+    "icons": {
+        "128": "icon_128.png"
+    },
+    "permissions": ["http://*.douyutv.com/*", "http://*.douyu.tv/*","http://*.douyu.com/*","tabs"],
+    "browser_action": {
+        "default_title": "设置",
+        "default_icon": "icon.png",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+          "matches": ["http://*.douyutv.com/*","http://*.douyu.com/*", "http://*.douyu.tv/*"],
+          "js": ["js/main.js"]
+        }
+    ]
+}
